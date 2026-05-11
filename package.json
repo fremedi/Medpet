@@ -1,16 +1,39 @@
 {
   "name": "medpet",
   "version": "0.1.0-dev",
+  "description": "AI-powered WhatsApp assistant for veterinary clinics using GPT-4o and Google Sheets integration",
   "type": "module",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js",
     "dev": "nodemon src/app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "whatsapp",
+    "ai",
+    "chatbot",
+    "gpt-4o",
+    "veterinary",
+    "assistant",
+    "openai",
+    "express",
+    "google-sheets"
+  ],
+  "author": "Medpet Team",
   "license": "ISC",
-  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu-usuario/medpet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tu-usuario/medpet/issues"
+  },
+  "homepage": "https://github.com/tu-usuario/medpet#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "dependencies": {
     "axios": "^1.15.0",
     "dotenv": "^17.4.2",

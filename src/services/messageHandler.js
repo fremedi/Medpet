@@ -176,7 +176,8 @@ Somos tu tienda de mascotas en línea.
 
       case 'option_ubicacion':
         response =
-          '📍 *Nuestra ubicación*\n\nEstamos en Av. Principal 123, Río Cuarto, Córdoba.';
+          '📍 Te esperamos en nuestra Sucursal';
+        await this.sendLocation(to);
         break;
 
       default:
@@ -336,15 +337,21 @@ Somos tu tienda de mascotas en línea.
   await whatsappService.sendContactMessage(to, contact);
 }
 
-  async sendLocation(to) {
-    await whatsappService.sendLocationMessage(
-      to,
-      -33.1304,
-      -64.3527,
-      'MedPet',
-      'Río Cuarto, Córdoba'
-    );
-  }
+async sendLocation(to) {
+  const latitude = -33.1227479;
+  const longitude = -64.3597796;
+  const name = 'MedPet';
+  const address = 'Estado de Israel 1067, Río Cuarto, Córdoba, Argentina';
+
+  // 📍 Enviar ubicación nativa
+  await whatsappService.sendLocationMessage(
+    to,
+    latitude,
+    longitude,
+    name,
+    address
+  );
+}
 
   /* ========================= HANDLER PRINCIPAL ========================= */
   async handleIncomingMessage(message) {
